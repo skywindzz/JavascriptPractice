@@ -84,19 +84,8 @@ function capitalize(str){
 
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
-var vowel = {
-	a = 0,
-	e : 0,
-	i : 0,
-	o : 0,
-	u : 0
-}
+var vowel = 0
 
 var vowelCounter = function(str) {
-	for (var i = 0; i < str.length; i++) {
-		if (str.charAt(0) === 'a') {
-			vowel.a = vowel.a + 1;
-		}
-	}
-	return vowel;
+	return str.match(/[aeiou]/gi).length;  //g compare every char ins str with aeiou i means case insensitive
 }
